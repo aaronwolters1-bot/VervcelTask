@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3efe7" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ListFlow" />
+    <title>ListFlow</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Simple list manager</p>
+        <h1>ListFlow</h1>
+        <p class="hero-copy">
+          Add items fast, mark them complete without hiding them, and move them up or down whenever the order changes.
+        </p>
+        <div class="list-toolbar">
+          <div class="toolbar-field">
+            <label class="toolbar-label" for="list-select">Current list</label>
+            <select class="toolbar-select" id="list-select" name="list"></select>
+          </div>
+          <form class="new-list-form" id="new-list-form">
+            <label class="sr-only" for="new-list-input">New list name</label>
+            <input
+              class="toolbar-input"
+              id="new-list-input"
+              name="listName"
+              type="text"
+              placeholder="New list name"
+              autocomplete="off"
+              maxlength="40"
+              required
+            />
+            <button class="ghost-button" type="submit">New list</button>
+          </form>
+        </div>
+        <form class="composer" id="item-form">
+          <label class="sr-only" for="item-input">New list item</label>
+          <input
+            class="composer-input"
+            id="item-input"
+            name="item"
+            type="text"
+            placeholder="Add something to your list"
+            autocomplete="off"
+            maxlength="120"
+            required
+          />
+          <label class="sr-only" for="due-date-input">Due date</label>
+          <input class="composer-date" id="due-date-input" name="dueDate" type="date" />
+          <button class="primary-button" type="submit">Add</button>
+        </form>
+      </section>
+
+      <section class="panel status-panel">
+        <div>
+          <p class="panel-label">Overview</p>
+          <p class="panel-value" id="status-text">0 items, 0 completed</p>
+        </div>
+        <span class="status-dot" aria-hidden="true"></span>
+      </section>
+
+      <section class="panel dashboard" id="dashboard">
+        <div class="dashboard-header">
+          <div>
+            <p class="panel-label">Your list</p>
+            <h2 id="active-list-title">Everything stays visible</h2>
+          </div>
+          <p class="badge" id="connection-badge">Saved locally</p>
+        </div>
+
+        <ul class="list" id="list-items" aria-live="polite"></ul>
+        <div class="empty-state" id="empty-state">
+          <p class="mini-label">No items yet</p>
+          <p>Add your first item above to start building your list.</p>
+        </div>
+      </section>
+
+      <section class="panel install-panel" id="install">
+        <p class="panel-label">How it works</p>
+        <h2>Quick actions</h2>
+        <ol>
+          <li>Add an item with the text box.</li>
+          <li>Tap the circle to mark it complete or incomplete.</li>
+          <li>Use Up and Down to reorder, Delete to remove, and due dates to keep track of timing.</li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "ListFlow",
+  "short_name": "ListFlow",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3efe7",
+  "theme_color": "#f3efe7",
+  "description": "A simple web app for managing lists with completion tracking and easy reordering.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
