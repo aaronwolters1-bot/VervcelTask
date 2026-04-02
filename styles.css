@@ -63,7 +63,6 @@ body::before {
   padding: 1.4rem;
 }
 
-.eyebrow,
 .panel-label,
 .mini-label {
   margin: 0;
@@ -95,7 +94,6 @@ h2 {
   font-size: 1.25rem;
 }
 
-.hero-copy,
 .empty-state p,
 li {
   color: var(--muted);
@@ -224,8 +222,7 @@ li {
 }
 
 .status-panel,
-.dashboard,
-.install-panel {
+.dashboard {
   margin-top: 1rem;
   padding: 1rem 1.1rem;
 }
